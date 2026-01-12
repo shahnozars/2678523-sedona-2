@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Shahnoza R](https://up.htmlacademy.ru/univer-html1/2/user/2678523).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Хрушков](https://htmlacademy.ru/profile/id98923)
+
 
 ---
 
