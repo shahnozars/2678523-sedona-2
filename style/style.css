@@ -82,17 +82,19 @@ ul {
 }
 
 .navigation-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, max-content));
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .navigation-list-user {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr auto;
     gap: 1rem;
+    align-items: center;
+    justify-content: end;
 }
 
 .navigation-link {
@@ -302,4 +304,103 @@ ul {
     display: inline-block;
     margin-right: 10px;
     background: #e5e5e5;
+}
+
+/* НОВЫЕ СТИЛИ CSS GRID ДЛЯ КАТАЛОГА И ФОРМ */
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.catalog-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: grid;
+    grid-template-rows: 200px 1fr;
+}
+
+.catalog-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+}
+
+.card-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #756157;
+    margin: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: end;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.form-field {
+    grid-column: 1 / -1;
+}
+
+.form-field.small {
+    grid-column: auto;
+    min-width: min-content;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.form-button {
+    padding: 12px 32px;
+    background: #82B3D3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
 }
